@@ -5,6 +5,9 @@ on:
     - cron: '0 9 * * *'  # Runs daily at 9:00 AM UTC (pick any specific time, not wildcards)
   workflow_dispatch:      # Lets you trigger manually for testing
 
+permissions:          # ← ADD THIS BLOCK
+  contents: write     # ← This gives push permission
+
 jobs:
   update:
     runs-on: ubuntu-latest
